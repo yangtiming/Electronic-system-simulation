@@ -1,0 +1,141 @@
+C51 COMPILER V9.59.0.0   NEW                                                               12/26/2020 15:45:58 PAGE 1   
+
+
+C51 COMPILER V9.59.0.0, COMPILATION OF MODULE NEW
+OBJECT MODULE PLACED IN .\Objects\new.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE new.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\new.l
+                    -st) TABS(2) OBJECT(.\Objects\new.obj)
+
+line level    source
+
+   1          #include <AT89X52.H>
+   2          
+   3          unsigned char code taba[]={0xfe,0xfd,0xfb,0xf7,0xef,0xdf,0xbf,0x7f};
+   4          unsigned char code tabb[]={0x18,0x18,0xFF,0xFF,0x18,0x3C,0x66,0xC3};
+   5          unsigned char code tabc[]={0xFF,0xFF,0x18,0x18,0x18,0x18,0xFF,0xFF};
+   6          unsigned char code tabd[]={0xC3,0xC7,0xCF,0xDF,0xFB,0xF3,0xE3,0xC3};
+   7          unsigned char code tabe[]={0x3C,0x7E,0xC3,0xC3,0xC3,0xC3,0x7E,0x3C};
+   8          unsigned char code tabf[]={0x1C,0x1E,0x1F,0x19,0x18,0x18,0xFF,0xFF};
+   9          unsigned char i,j;
+  10          
+  11          void delay(void)
+  12          {
+  13   1        unsigned char i,j;
+  14   1        for(i=10;i>0;i--)
+  15   1        for(j=24;j>0;j--);
+  16   1      }
+  17          
+  18          void delay1(void)
+  19          {
+  20   1        unsigned char i,j,k;
+  21   1        for(k=10;k>0;k--)
+  22   1        for(i=20;i>0;i--)
+  23   1        for(j=24;j>0;j--);
+  24   1      
+  25   1      }
+  26          
+  27          void main(void)
+  28          {
+  29   1       
+  30   1        while(1)
+  31   1          {
+  32   2            for(j=0; j<10; j++) 
+  33   2              {
+  34   3                for(i=0;i<8;i++)
+  35   3                  {
+  36   4                    P2=taba[i];
+  37   4                    P3=tabb[i];
+  38   4              
+  39   4                    delay();
+  40   4                  }
+  41   3              }
+  42   2         
+  43   2                for(i=0;i<8;i++)
+  44   2                  {
+  45   3                    P2=taba[i];
+  46   3              P3=0xff;
+  47   3                    delay1();
+  48   3                  }
+  49   2      
+  50   2           for(j=0; j<10; j++) 
+  51   2              {
+  52   3                for(i=0;i<8;i++)
+  53   3                  {
+  54   4                    P2=taba[i];
+C51 COMPILER V9.59.0.0   NEW                                                               12/26/2020 15:45:58 PAGE 2   
+
+  55   4                    P3=tabc[i];
+  56   4      
+  57   4                    delay();
+  58   4                  }
+  59   3              }
+  60   2           for(i=0;i<8;i++)
+  61   2            {
+  62   3             delay1();
+  63   3           }
+  64   2           for(j=0; j<10; j++)
+  65   2              {
+  66   3                for(i=0;i<8;i++)
+  67   3                  {
+  68   4                    P2=taba[i];
+  69   4                    P3=tabd[i]; 
+  70   4      
+  71   4                    delay();
+  72   4                  }
+  73   3              }
+  74   2          for(i=0;i<8;i++)
+  75   2                  {
+  76   3                    P2=taba[7-i];
+  77   3                   
+  78   3              P3=0xff;
+  79   3                    delay1();
+  80   3                  }
+  81   2           for(i=0;i<8;i++)
+  82   2            {
+  83   3             delay1();
+  84   3           }
+  85   2            for(j=0; j<10; j++)
+  86   2              {
+  87   3                for(i=0;i<8;i++)
+  88   3                  {
+  89   4                    P2=taba[i];
+  90   4                    P3=tabe[i];
+  91   4                    delay();
+  92   4                  }
+  93   3              }
+  94   2         for(i=0;i<8;i++)
+  95   2            {
+  96   3             delay1();
+  97   3           }
+  98   2           for(j=0; j<10; j++) 
+  99   2              {
+ 100   3                for(i=0;i<8;i++)
+ 101   3                  {
+ 102   4                    P2=taba[i];
+ 103   4                    P3=tabf[i];
+ 104   4                    delay();
+ 105   4                  }
+ 106   3              }
+ 107   2         for(i=0;i<8;i++)
+ 108   2            {
+ 109   3             delay1();
+ 110   3           }
+ 111   2      
+ 112   2           }
+ 113   1       }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+C51 COMPILER V9.59.0.0   NEW                                                               12/26/2020 15:45:58 PAGE 3   
+
+   CODE SIZE        =    509    ----
+   CONSTANT SIZE    =     48    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      2    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
