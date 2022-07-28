@@ -7,3 +7,10 @@ Electronic system simulation
  
 ## Circuit design
 <img src="https://github.com/yangtiming/Electronic-system-simulation/blob/master/images/pic%201.png" width="500px">
+
+
+## 8×8 LED display based on 51 MCU
+### Abstract
+ The P0 port of 51 MCU is connected to 74LS245 as the row driver controlling the 8×8 LED lattice screen. The column selection is controlled by port P1. When the program is running, the words "大", "工", "N", "O" and "1" are displayed in turn on the 8×8 LED lattice screen.
+
+<img src="https://github.com/yangtiming/Electronic-system-simulation/blob/master/images/pic3.png" width="650px">
